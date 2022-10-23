@@ -110,7 +110,26 @@ body {
 .card.besar {
   transform: scale(1.12);
 }
+/* latihan5 */
+.container-lima {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex;
+}
 
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+.kotak span {
+  margin: auto;
+}
 /* responsive */
 @media (min-width: 600px) {
   .container-dua {
