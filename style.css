@@ -14,3 +14,16 @@
   background-color: aqua;
   margin: 2px;
 }
+
+.satu {
+  order: 3;
+}
+.dua {
+  order: 4;
+}
+.tiga {
+  order: 2;
+}
+.empat {
+  order: 1;
+}
