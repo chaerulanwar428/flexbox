@@ -38,3 +38,37 @@ nav ul li a {
 nav ul li a:hover {
   color: rgb(182, 246, 246);
 }
+
+/* hamburger menu */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.menu-togglespan {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(182, 246, 246);
+  border-radius: 3px;
+}
+/* responsive breakpoint */
+
+/* ukuruan tablet */
+
+@media screen and(max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* ukuran mobile */
+
+@media screen and(max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
