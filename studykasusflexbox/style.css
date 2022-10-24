@@ -10,10 +10,10 @@ body {
 /* navbar */
 nav {
   display: flex;
-  background-color: aqua;
+  background-color: rgb(255, 0, 212);
   justify-content: space-around;
   /* padding: 20px 0; */
-  color: rgb(30, 192, 154);
+  color: rgb(241, 202, 234);
   height: 50px;
   align-items: center;
 }
@@ -24,42 +24,78 @@ nav .logo {
 
 nav ul {
   display: flex;
-  list-style: 0;
+  list-style: none;
   width: 40%;
   justify-content: space-between;
 }
 
 nav ul li a {
-  color: rgb(30, 192, 154);
+  color: rgb(229, 214, 226);
   text-decoration: none;
   font-size: 0.8cm;
 }
 
 nav ul li a:hover {
-  color: rgb(182, 246, 246);
+  color: rgb(236, 224, 236);
 }
 
 /* hamburger menu */
 
 .menu-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   height: 20px;
+  position: relative;
 }
 
-.menu-togglespan {
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: rgb(182, 246, 246);
+  background-color: rgb(241, 203, 241);
   border-radius: 3px;
+  transition: all 0.5s;
 }
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
 /* responsive breakpoint */
 
 /* ukuruan tablet */
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
   nav ul {
     width: 50%;
   }
@@ -67,7 +103,10 @@ nav ul li a:hover {
 
 /* ukuran mobile */
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
   nav ul {
     display: none;
   }
