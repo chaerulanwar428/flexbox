@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  background-color: aqua;
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  color: rgb(30, 192, 154);
+  height: 50px;
+  align-items: center;
+}
+
+nav .logo {
+  letter-spacing: 3px;
+}
+
+nav ul {
+  display: flex;
+  list-style: 0;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: rgb(30, 192, 154);
+  text-decoration: none;
+  font-size: 0.8cm;
+}
+
+nav ul li a:hover {
+  color: rgb(182, 246, 246);
+}
